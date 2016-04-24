@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>注册</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut ico" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <div id="top">
+      <div class="container">
+        <span class="welcome">您好，欢迎英联邦联心(全球)俱乐部！</span>
+        <div class="r">
+          <a href="login.html">请登录</a>   |   <a href="register.html">免费注册</a>   |   <a href="#">帮助中心</a>   |   <a href="#">English</a>   |   <span class="tel">客服热线：<span class="num">0208-881-3097</span></span>
+        </div>
+      </div>
+    </div>
+    <div id="login">
+      <div class="container">
+        <div class="login_box">
+          <a href="index.html"><img src="images/mblogo.png" class="logo" alt=""></a>
+          <h1>30秒注册，开始联心生活</h1>
+          <div class="form">
+            <form action="" method="get" onsubmit="return check_form();">
+              <div class="fg">
+                <label for="">登录账号</label>
+                <input type="text" id="user" name="user" class="text" placeholder="登陆帐号,不能包含符号,中文,空格">
+              </div>
+              <div class="fg">
+                <label for="">手机号码</label>
+                <input type="text" class="text" id="telphone" name="telphone" placeholder="手机号码,13个数字组合">
+              </div>
+              <div class="fg">
+                <label for="">登录密码</label>
+                <input type="password" id="password" name="password" class="text" placeholder="登陆密码,8个以上字母和数字组合">
+              </div>
+              <div class="fg">
+                <label for="">验证码</label>
+                <input type="text" class="text yzm" placeholder="请输入验证码">
+                <div class="box"><img src="images/codeimg.jpg" alt=""></div>
+              </div>
+              <div class="fg">
+                <label for="">&nbsp;</label>
+                <input type="checkbox" name="agreement" class="checkbox"> 我已同意并接受英联邦（全球）联心俱乐部 <a href="#">注册协议</a>
+              </div>
+              <input type="submit" class="submit" value="立即注册">
+
+            </form>
+          </div>
+          <div class="bottom">
+            <p>已有账号？ <a href="login.html">点此登录</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div class="top">
+          <div class="item">
+            <img src="images/icon_1.jpg" alt="">
+            <h5>100%原装正品</h5>
+            <p>正品保障 放心购物</p>
+          </div>
+          <div class="line"></div>
+          <div class="item">
+            <img src="images/icon_2.jpg" alt="">
+            <h5>售后无忧</h5>
+            <p>海量品牌放心购</p>
+          </div>
+          <div class="line"></div>
+          <div class="item">
+            <img src="images/icon_3.jpg" alt="">
+            <h5>海外直邮</h5>
+            <p>极速物流 极速送达</p>
+          </div>
+          <div class="line"></div>
+          <div class="item">
+            <img src="images/icon_4.jpg" alt="">
+            <h5>精选100个品牌</h5>
+            <p>满足购物需求</p>
+          </div>
+        </div>
+        <div class="mid">
+          <div class="l">
+            <span class="num">0208-881-3097</span>
+            <p>周一至周五9:30-18:30</p>
+          </div>
+          <dl>
+            <dt>新手指南</dt>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+            <dd><a href="#">支付方式</a></dd>
+          </dl>
+          <dl>
+            <dt>关于联心</dt>
+            <dd><a href="#">联心介绍</a></dd>
+            <dd><a href="#">联系我们</a></dd>
+            <dd><a href="#">招商加盟</a></dd>
+          </dl>
+          <dl>
+            <dt>服务保障</dt>
+            <dd><a href="#">正品保障</a></dd>
+            <dd><a href="#">发票保障</a></dd>
+            <dd><a href="#">用户协议</a></dd>
+          </dl>
+          <dl>
+            <dt>配送方式</dt>
+            <dd><a href="#">配送费用</a></dd>
+            <dd><a href="#">配送说明</a></dd>
+            <dd><a href="#">验货说明</a></dd>
+          </dl>
+          <dl>
+            <dt>售后服务</dt>
+            <dd><a href="#">退货流程</a></dd>
+            <dd><a href="#">退货政策</a></dd>
+            <dd><a href="#">售后无忧</a></dd>
+          </dl>
+          <dl>
+            <dt>友情链接</dt>
+            <dd><a href="#">快递查询</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div id="bottom">
+      <p>Copyright © 2015   GLOBAL  COMMONWEALTH HTH CLUB </p>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+    function check_form(){
+        if(!/[a-zA-Z0-9_]{3,18}/.test($('#user').val())){
+          alert("用户名输入错误！");
+          $('#user').focus();
+          return false;
+        }
+        if(!/^[1][0-9][0-9]{9}$/.test($('#telphone').val())){
+          alert("手机号码输入错误！");
+          $('#telphone').focus();
+          return false;
+        }
+        
+        if(!/[a-zA-Z0-9_]{8,20}/.test($('#password').val())){
+          alert("密码输入错误！");
+          $('#password').focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
